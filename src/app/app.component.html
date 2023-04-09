@@ -1,0 +1,31 @@
+<div class="form">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Username</label>
+            <input type="text" formControlName="userName" placeholder="Username">
+        </div>
+        <small *ngIf=" f['userName'].invalid  && (f['userName'].touched ||  profileFormSubmitted)">
+            <div  *ngIf=" f.userName.errors?.['required']">Username is required</div>
+            <div  *ngIf=" f.userName.errors?.['minlength']">Enter atleast 6 Characters</div>
+        </small>
+        <div>
+            <label>Password</label>
+            <input type="password" formControlName="passWord" placeholder="Password">
+        </div>
+        <small *ngIf=" f.passWord.invalid && (f.passWord.touched ||profileFormSubmitted )">
+            <div  *ngIf=" f.passWord.errors?.['required']">Password is required</div>
+            <div  *ngIf=" f.passWord.errors?.['minlength']">Minimum Length of password is 8</div>
+        </small>
+        <div>
+            <label>Confirm Password</label>
+            <input type="password" formControlName="confirmPwd" placeholder="Confirm Password">
+            <small  *ngIf="f.confirmPwd.touched || profileFormSubmitted">
+                <div  *ngIf=" f.confirmPwd.errors?.['required']"> Confirm Password is required</div>
+                <div *ngIf="!f.confirmPwd.errors?.['required'] && profileForm.errors?.['misMatch']"> Confirm Password did not match</div>
+
+            </small>
+        </div>
+
+        <input type="submit" value="submit">
+    </form>
+</div>

@@ -1,0 +1,42 @@
+.form {
+    margin: 180px auto;
+    padding: 20px;
+    width: 500px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(19, 6, 81, 0.892);
+    background-color: hsl(100, 10%, 82%);
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+input[type=text],input[type=password] {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 85%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: bold;;
+}
+
+input[type=submit] {
+    padding: 5px;
+    margin: 10px;
+    color: rgb(86, 33, 32);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: antiquewhite;
+
+}
+
+small {
+    color: red;
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: initial;
+}
